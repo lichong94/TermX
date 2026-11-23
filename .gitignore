@@ -1,0 +1,43 @@
+# TermX 仓库忽略规则
+
+# 本地打包工具链（Python/Node 运行时，约 838 MB，不入库）
+/工具/
+
+# 构建中间产物与解压目录（与安装包内容重复）
+/工程/build/
+/工程/dist/pkg7/
+/工程/dist/single7/
+/工程/dist/fast7/
+/工程/dist/_zipupdate/
+/工程/dist/测试报告/
+/工程/dist/TermX_Data/
+
+# 部署与发布私钥（严禁入库）
+/工程/.deploy_key/
+/.release_keys/
+
+# 第三方随包组件（OpenSSH / VcXsrv / plink / 字体 / 运行库，已打包进安装包，体积大不入库）
+/工程/vendor/
+
+# 内部聊天素材（含历史会话原文，其中有真实云账号密钥，禁止公开）
+/素材/
+
+# 内部运维文档与发布记录（含服务器地址、部署路径、口令等，不公开）
+/文档/TermX-项目交接文档.md
+/文档/接手核验-2026-11-18.md
+/文档/README-项目内部版.md
+/发布记录/
+/工程/docs/云服务器部署说明.txt
+/工程/docs/手机宝塔部署步骤.txt
+/工程/docs/官网实时同步说明.txt
+/工程/dist/TermX_源码.zip
+
+# 运行时数据目录（自测生成的示例会话库，数百条测试主机，不入库）
+/工程/src/TermX_Data/
+
+# 日志与本地状态
+*.log
+/工程/build/.sync_state.json
+/工程/__pycache__/
+__pycache__/
+*.pyc
